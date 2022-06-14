@@ -1,9 +1,21 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 48px;
   max-width: 1024px;
   margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  @media (max-width: 487px) {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
 
   &__card {
     display: flex;
